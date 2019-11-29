@@ -1,0 +1,29 @@
+*{
+    margin:0em;
+    padding:0em;
+}
+body{
+    max-width: 1024px;
+    background-color: lightgray;
+    
+}
+header h1{
+    text-align: center;
+    background-color: lightseagreen;
+    padding: 0.5em;  
+}
+form{
+    text-align: left;
+    margin: 1em;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+}
+form label{
+    font-size: 1em;
+    margin : 1em 0 1em 2em;    
+}
+form input{
+    font-size: 1em;
+    margin: 0.5em 0;
+    width: 15em;
+}
