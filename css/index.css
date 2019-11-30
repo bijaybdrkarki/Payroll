@@ -12,18 +12,44 @@ header h1{
     background-color: lightseagreen;
     padding: 0.5em;  
 }
-form{
+.employee{
     text-align: left;
     margin: 1em;
     display:grid;
     grid-template-columns: 1fr 2fr;
 }
-form label{
+label{
     font-size: 1em;
     margin : 1em 0 1em 2em;    
 }
-form input{
+input, select{
     font-size: 1em;
     margin: 0.5em 0;
     width: 15em;
+}
+.faculty, .worker{
+    text-align: left;
+    margin-left:1em;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+}
+.notvisible{
+    display: none;
+}
+.facultyVisible{
+    display: block;
+    background-color: lightgoldenrodyellow;
+}
+.workerVisible{
+    display: block;
+    background-color: lightgreen;
+}
+.submitButton{
+    display: block;
+    font-size: 1em;
+    background-color: lightslategray;
+    color:whitesmoke;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin: 1em 0 0 5em;
 }

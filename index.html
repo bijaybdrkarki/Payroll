@@ -12,7 +12,7 @@
         <h1>ABC College Employees Payroll</h1>
     </header>
     <main>
-        <form>
+        <form class="employee">
             <label>Enter employee number:</label>
             <input type="text" id="empNumber">
             <label>Enter employee name:</label>
@@ -21,9 +21,26 @@
             <input type="text" id="empDepart">
             <label>Enter employee Hours' of work:</label>
             <input type="text" id="empWorkHrs">
-            <label>Enter employee Type code:</label>
-            <input type="text" id="empType">
+            <label>Select employee Type code:</label>
+            <select name="code" id="empCode" class="">
+                <option value="" disabled selected>-- Select --</option>
+                <option value="faculty">Faculty</option>
+                <option value="regularWorker">Regular worker</option>
+            </select>   
         </form>
+        <div class="notvisible" id="faculty">
+            <form class="faculty">
+                <label>Enter qualification code:</label>
+                <input type="text" id="qualCode">
+            </form>
+        </div>
+        <div class="notvisible" id="worker">
+            <form class="worker">
+                <label>Enter fixed salary:</label>
+                <input type="text" id="fixedSalary">
+            </form>
+        </div>
+        <button type="submit" class="notvisible" id="submit">Display Monthly Payroll</button>
     </main>
 
     <script src="js/index.js"></script>
