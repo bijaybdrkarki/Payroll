@@ -88,7 +88,14 @@ function calPayroll()
     }
     let deduction = calDecduction(grossSalary);
     let netSalary = grossSalary - deduction;
-    console.log(netSalary);
+    document.getElementById('displayResults').innerHTML=   `<div>Employee name : ${empName}</div>
+                                                            <div>Employee work Hrs : ${empWorkHrs} </div>                                                         
+                                                            <div>Employee number : ${empNumber}</div>
+                                                            <div>Employee Gross Salary : $ ${grossSalary} </div>
+                                                            <div>Employee department : ${empDepart} </div> 
+                                                            <div>Tax Deduction : $ ${deduction} </div>
+                                                            <div>Employee type : ${empCode.value} </div>  
+                                                            <div>Net salary : $ ${netSalary} </div> `;
 }
 
 

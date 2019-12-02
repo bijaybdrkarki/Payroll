@@ -53,3 +53,12 @@ input, select{
     padding: 0.5em;
     margin: 1em 0 0 5em;
 }
+.display{
+    margin: 1em 0 0 3em;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
+.display div{
+    padding: 0.5em;
+    background-color: bisque;
+}
