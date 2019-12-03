@@ -23,7 +23,7 @@ function calDecduction(grossSalary)
     {
         let canIncomeTax = 0.25 * (grossSalary - 2500.00);
         let healthSurge = 0;
-            if ((grossSalary-2500) > 3000)
+            if (grossSalary > 3000)
             {
                  healthSurge = 33.00;
             }
@@ -112,7 +112,7 @@ function calPayroll()
                                                             <div>Tax Deduction : $ ${deduction} </div>
                                                             <div>Net salary : $ ${netSalary} </div> 
                                                             </div>`;
-                                                        }
+}
 
 
 
