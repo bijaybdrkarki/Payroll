@@ -44,12 +44,16 @@ function calPayroll()
 {
     let empNumber = document.getElementById('empNumber').value;
     let empName =  document.getElementById('empName').value;
+    empName = empName.charAt(0).toUpperCase()+ empName.slice(1);
     let empDepart = document.getElementById('empDepart').value;
+    empDepart = empDepart.charAt(0).toUpperCase() + empDepart.slice(1); 
     let empWorkHrs = document.getElementById('empWorkHrs').value;    
     let qualCode= document.getElementById("qualCode").value;
     let grossSalary = 0;
+    let Code='';
     if (empCode.value == 'faculty')
-    {        
+    {  
+        Code = 'Faculty';       
         if (qualCode == 'M')
         {
             grossSalary = parseFloat(175 * empWorkHrs) + 1500;
@@ -66,6 +70,7 @@ function calPayroll()
     }
     else if (empCode.value == 'regularWorker')
     {
+        Code =  'Regular Worker';
         let fixedSalary = document.getElementById('fixedSalary').value;
         if (empWorkHrs == 160)
         {
@@ -88,15 +93,19 @@ function calPayroll()
     }
     let deduction = calDecduction(grossSalary);
     let netSalary = grossSalary - deduction;
-    document.getElementById('displayResults').innerHTML=   `<div>Employee name : ${empName}</div>
-                                                            <div>Employee work Hrs : ${empWorkHrs} </div>                                                         
+    document.getElementById('displayResults').innerHTML =   `<div class="info">
+                                                            <div>Employee name : ${empName}</div>          
                                                             <div>Employee number : ${empNumber}</div>
+                                                            <div>Employee type : ${Code} </div>
+                                                            <div>Employee department : ${empDepart} </div>
+                                                            </div>
+                                                            <div class="salary">
+                                                            <div>Employee work Hrs : ${empWorkHrs} </div>
                                                             <div>Employee Gross Salary : $ ${grossSalary} </div>
-                                                            <div>Employee department : ${empDepart} </div> 
                                                             <div>Tax Deduction : $ ${deduction} </div>
-                                                            <div>Employee type : ${empCode.value} </div>  
-                                                            <div>Net salary : $ ${netSalary} </div> `;
-}
+                                                            <div>Net salary : $ ${netSalary} </div> 
+                                                            </div>`;
+                                                        }
 
 
 
