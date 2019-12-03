@@ -54,19 +54,26 @@ function calPayroll()
     if (empCode.value == 'faculty')
     {  
         Code = 'Faculty';       
-        if (qualCode == 'M')
+        if (empWorkHrs>0)
         {
-            grossSalary = parseFloat(175 * empWorkHrs) + 1500;
-            
-        }
-        else if (qualCode == 'B')
-        {
-            grossSalary = parseFloat(100 * empWorkHrs) + 600;
+            if (qualCode == 'M')
+            {
+                grossSalary = parseFloat(175 * empWorkHrs) + 1500;
+            }
+            else if (qualCode == 'B')
+            {
+                grossSalary = parseFloat(100 * empWorkHrs) + 600;
+            }
+            else
+            {
+                window.alert("qualification code can only be M or B");
+            }
         }
         else
         {
-            window.alert("qualification code can only be M or B");
+            window.alert("Work hrs can not be -ve");
         }
+        
     }
     else if (empCode.value == 'regularWorker')
     {
